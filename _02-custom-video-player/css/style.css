@@ -22,13 +22,14 @@ body {
 
 
 h1 {
-    color: #fff;
+    color: #222;
 }
 
 .screen {
+
     cursor: pointer;
     width: 60%;
-    background-color: #333!important;
+    background-color: hsl(270, 36%, 4%)!important;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
 }
@@ -51,6 +52,9 @@ h1 {
 
 .controls .fa-play {
     color: #27a745;
+}
+.controls .fa-pause {
+    color: #fff;
 }
 .controls .fa-stop {
     color: #dc3545;
