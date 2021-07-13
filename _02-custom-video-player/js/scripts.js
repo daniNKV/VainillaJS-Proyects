@@ -6,15 +6,17 @@ const $play = document.getElementById('play');
 const $stop = document.getElementById('stop');
 const $progress = document.getElementById('progress');
 const $timestamp = document.getElementById('timestamp');
-
+const $body = document.querySelector('body')
 
 // ##########    Play & Pause   ########## //
 function toggleVideoStatus () {
     if($video.paused) {
         $video.play();
-        console.log('video pausado');
+        $body.style.background = '#222'
     }else {
         $video.pause();
+        $body.style.background = '#fff'
+
     }
 }
 
