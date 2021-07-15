@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;600;700&display=swap');
+
+:root {
+    --clr-ppal: #000000;
+    --clr-bg: #f4f4f4;
+}
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--clr-bg);
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+
+
+}
+
+h1 {
+    font-size: 3.5rem;
+    text-align: center;
+}
+h2 {
+    border-bottom: 1px solid #111;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+    margin: 0 0 2rem;
+}
+h3 {
+    background-color: #fff;
+    border-bottom: 1px solid #111;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+    margin: 2rem 0 0 ;
+}
+h3 strong {
+    font-weight: bold;
+}
+
+h2 strong {
+    font-weight: 600;
+}
+
+.container {
+    display: flex;
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 80rem;
+}
+
+aside {
+    padding: 1rem 2rem;
+    width: 25rem;
+    border-right: 1px solid #111;
+}
+
+button {
+    cursor: pointer;
+    background-color: #fff;
+    border: solid 1px #111;
+    border-radius: .5rem;
+    display: block;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+}
+
+button:active {
+    transform: scale(0.98);
+    box-shadow: none;
+    transition: box-shadow 0.1s linear, transform 0.1s linear;
+}
+
+main {
+    flex: 1;
+    padding: 1rem 2rem;
+
+}
+
+.person {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+
+}
