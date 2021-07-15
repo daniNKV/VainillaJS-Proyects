@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;600;700&display=swap');
+
+:root {
+    --clr-ppal: #000000;
+    --clr-bg: #f4f4f4;
+}
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--clr-bg);
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+
+
+
+}
+
+h1 {
+    font-size: 3.5rem;
+    text-align: center;
+}
+
+
+
+
