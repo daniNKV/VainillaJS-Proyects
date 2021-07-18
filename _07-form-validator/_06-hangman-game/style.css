@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;600;700&display=swap');
+
+:root {
+    --clr-ppal: #000000;
+    --clr-bg: #dfdfdf;
+
+    --clr-green: #2ecc71;
+    --clr-red: #e74c3c;
+}
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 16px;
+    background-color: var(--clr-bg);
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+    overflow: hidden;
+
+
+}
+
+h1 {
+    font-size: 3.5rem;
+    text-align: center;
+}
+h2 {
+    text-align: center;
+    margin: 0 0 2rem;
+    font-weight: 600;
+}
+p {
+    font-size: 2rem
+}
+
+.container {
+    background-color: rgb(250, 250, 250);
+    border-radius: .5rem;
+    box-shadow: 0 2px 10px 1px rgba(0,0,0,0.3);
+    width: 40rem;
+}
+
+.form {
+    padding: 3rem 4rem;
+
+}
+
+.form-control {
+    margin-bottom: 1rem;
+    padding-bottom: 2rem;
+    position: relative;
+}
+
+.form-control label {
+    color: #777;
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.form-control input {
+    border: 2px solid #f0f0f0;
+    border-radius: .5rem;
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.4rem;
+}
+
+.form-control input:focus {
+    outline: 0;
+    border-color: #777
+}
+
+.form-control.sucess input {
+    border-color: var(--clr-green);
+}
+
+.form-control.error input {
+    border-color: var(--clr-red);
+}
+
+.form-control small {
+    color: var(--clr-red);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.form-control.error small {
+    visibility: visible;
+}
+
+.form button {
+    cursor: pointer;
+    background-color: #3498db;
+    border: 2px solid #3498db;
+    color: #FFF;
+    display: block;
+    font-size: 1.6rem;
+    padding: 1rem;
+    margin-top: 2rem;
+    width: 100%;
+    border-radius: .3rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    transition: box-shadow 0.1s ease;
+}
+
+.form button:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
