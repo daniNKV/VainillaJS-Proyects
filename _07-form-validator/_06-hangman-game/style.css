@@ -84,7 +84,7 @@ p {
     border-color: #777
 }
 
-.form-control.sucess input {
+.form-control.success input {
     border-color: var(--clr-green);
 }
 
