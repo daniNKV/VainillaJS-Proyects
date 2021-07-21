@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@200;300;400;600;700&display=swap');
+
+:root {
+    --clr-ppal: #000000;
+    --clr-bg: #f7f7f7;
+    --clr-green: #2ecc71;
+    --clr-red: #c0392b;
+
+    --box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0.14);
+
+}
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 16px;
+    background-color: var(--clr-bg);
+    font-family: 'Lato', sans-serif;
+    color: var(--clr-ppal);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3.5rem;
+    letter-spacing: 1px;
+    margin: 0;
+
+}
+
+h3 {
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 1rem;
+    margin: 4rem 0 1rem;
+}
+
+h4 {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+p {
+    font-size: 2rem
+}
+
+.container {
+    margin: 3rem auto;
+    width: 40rem;
+}
+
+.inc-exp-container {
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+    border-radius: .5rem;
+}
+
+.inc-exp-container > div {
+    flex: 1;
+    text-align: center;
+}
+
+.inc-exp-container > div:first-of-type {
+    border-right: 1px solid #dedede;
+}
+
+.money {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    margin: .5rem 0;
+}
+
+.money.plus {
+    color: var(--clr-green);
+}
+
+.money.minus {
+    color: var(--clr-red);
+}
+
+label {
+    display: inline-block;
+    margin: 1rem 0;
+    font-weight: 600;
+    font-size: 1.7rem;
+    letter-spacing: .5px;
+}
+
+input[type="text"],
+input[type="number"] {
+    border: 1px solid #dedede;
+    border-radius: .2rem;
+    display: block;
+    font-size: 1.6rem;
+    padding: 1rem;
+    width: 100%;
+}
+.form-control label span {
+    font-size: 1.4rem
+}
+.form-control label span i:first-of-type{
+    margin-right: 1rem;
+    color: darkgreen
+}
+.form-control label span i:last-of-type {
+    color: darkred
+}
+.btn {
+    background-color: #9c88ff;
+    box-shadow: var(--box-shadow);
+    color: #fff;
+    border: 0;
+    display: block;
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+    padding: 1rem;
+    width: 100%;
+    cursor: pointer;
+}
+.btn:focus,
+.delete-btn:focus {
+    outline: none;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 4rem;
+}
+
+.list li {
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: .5rem;
+}
+
+.list li.plus {
+    border-right: 5px solid var(--clr-green);
+}
+
+.list li.minus {
+    border-right: 5px solid var(--clr-red);
+}
+
+.delete-btn {
+    cursor: pointer;
+    background-color: #e74c3c;
+    border: 0;
+    color: #fff;
+    font-size: 2rem;
+    line-height: 20px;
+    padding: .2rem .5rem;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.list li:hover .delete-btn {
+    opacity: 1;
+}
