@@ -59,13 +59,14 @@ p {
 
 .filter-container {
     margin-top: 2rem;
-    width: 80vh;
+    width: 80vw;
     max-width: 80rem;
 }
 
 .filter {
     width: 100%;
     padding: 1.2rem;
+    font-size: 1.6rem;
 }
 
 .post {
@@ -111,7 +112,7 @@ p {
 }
 
 .loader {
-    /*opacity: 0*/
+    opacity: 0;
     display: flex;
     position: fixed;
     bottom: 5rem;
