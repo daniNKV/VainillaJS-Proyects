@@ -10,9 +10,9 @@
     <title>Speech Reader</title>
 </head>
     <div class="container">
-        <h1>Speech Text Reader</h1>
+        <h1>Lector de textos</h1>
         <button id="toggle" class="btn btn-toggle">
-            Toggle Text Box
+            Voz & Escribir
         </button>
         <div id="text-box" class="text-box">
             <div class="close" id="close">
@@ -24,7 +24,15 @@
             <button id="read" class="btn">Leer Texto</button>
         </div>
 
-        <main></main>
+        <main>
+            <div class="box" id="boquita" onclick="reproducirAudio()">
+                <img src="./img/boca.jpg" alt="Boquita Juniors"/>
+                <p class="info">
+                    Quiero ir a ver a Boca
+                </p>
+                <audio id="cancion" src="audio/boca.mp3"></audio>
+            </div>
+        </main>
     </div>
 
   
