@@ -169,3 +169,70 @@ h4 {
     font-size: 1.6rem;
     color: rgb(170, 170, 170);
 }
+
+
+.navigation {
+    display: flex;
+    margin: 2rem;
+}
+
+.navigation .nav-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: transform 0.2s ease;
+
+}
+
+.navigation .nav-button:first-of-type:hover {
+    transform: translateX(-5px) scale(1.1);
+}
+.navigation .nav-button:last-of-type:hover {
+    transform: translateX(5px) scale(1.1);
+}
+
+.navigation p {
+    margin: 0 2.5rem;
+}
+
+
+.add-container {
+    opacity: 0;
+    z-index: -1;
+    background-color: #f0f0f0;
+    border-top: 2px solid #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    transition: 0.3s ease;
+}
+
+.add-container.show {
+    opacity: 1;
+    z-index: 2;
+}
+
+.add-container h3 {
+    margin: 1rem 0;
+}
+
+.form-group label {
+    display: block;
+    margin: 2rem 0 1rem;
+}
+
+.form-group textarea {
+    border: 1px solid #aaa;
+    border-radius: .3rem;
+    font-size: 1.6rem;
+    padding: 1.2rem;
+    min-width: 50rem;
+    max-width: 100%;
+}
