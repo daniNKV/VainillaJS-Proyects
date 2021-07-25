@@ -1,7 +1,7 @@
 let DOM = {
     cardsContainer : document.getElementById('cards-container'),
     prevBtn : document.getElementById('prev'),
-    nextBtn : document.getElementById('mext'),
+    nextBtn : document.getElementById('next'),
     currentEl : document.getElementById('current'),
     showBtn : document.getElementById('show'),
     hideBtn : document.getElementById('hide'),
@@ -83,3 +83,33 @@ function updateCurrentText() {
 
 createCards()
 
+
+// Event Listeners 
+
+DOM.nextBtn.addEventListener('click', () => {
+    cardsEl[currentActiveCard].className = 'card left';
+    
+    currentActiveCard++
+
+    if (currentActiveCard > cardsEl.length - 1) {
+        currentActiveCard = cardsEl.length - 1 ;
+    } 
+
+    cardsEl[currentActiveCard].className = 'card active'
+
+    updateCurrentText();
+})
+
+DOM.prevBtn.addEventListener('click', () => {
+    cardsEl[currentActiveCard].className = 'card right';
+    
+    currentActiveCard--
+
+    if (currentActiveCard < 0) {
+        currentActiveCard = 0 ;
+    } 
+
+    cardsEl[currentActiveCard].className = 'card active'
+
+    updateCurrentText();
+})
