@@ -21,6 +21,8 @@ const cardsEl = [];
 
 // Guardar cards data
 
+let cardsData = getCardsData();
+/*
 const cardsData = [
     {
         question: 'What is a Variable?',
@@ -35,12 +37,16 @@ const cardsData = [
         answer: 'thisIsAVariable'
     }
 ]
+*/
+
 
 // Crear todas las cards
 function createCards() {
     cardsData.forEach((data, index) => createCard(data, index));
-
 }
+
+createCards();
+
 
 // Crear una sola card en el DOM
 function createCard (data, index) {
@@ -77,12 +83,22 @@ function createCard (data, index) {
 
 }
 
+// Mostrar numero de cards
 function updateCurrentText() {
     DOM.currentEl.innerText = `${currentActiveCard + 1} / ${cardsEl.length}`
 };
 
-createCards()
+// Sacar cards de Local Storage
+function getCardsData() {
+    const cards = JSON.parse(localStorage.getItem('cards'));
+    return cards === null ? [] : cards;
+}
 
+// Añadir card a Local Storage
+function setCardsData(cards) {
+    localStorage.setItem('cards', JSON.stringify(cards));
+    window.location.reload();
+}
 
 // Event Listeners 
 
@@ -112,4 +128,39 @@ DOM.prevBtn.addEventListener('click', () => {
     cardsEl[currentActiveCard].className = 'card active'
 
     updateCurrentText();
+})
+
+
+// Mostrar ventana para añadir una card
+DOM.showBtn.addEventListener('click', () => DOM.addContainer.classList.add('show'));
+
+// Ocultar ventana para añadir una card
+DOM.hideBtn.addEventListener('click', () => DOM.addContainer.classList.remove('show'));
+
+// Añadir nueva card
+DOM.addCardBtn.addEventListener('click', () => {
+    const question = DOM.questionEl.value;
+    const answer = DOM.answerEl.value;
+
+    if(question.trim() && answer.trim()) {
+        const newCard = { question, answer };
+        createCard(newCard);
+
+        DOM.questionEl.value = '';
+        DOM.answerEl.value = '';
+
+        DOM.addContainer.classList.remove('show');
+
+        cardsData.push(newCard);
+
+        setCardsData(cardsData);
+    }
+})
+
+// Borrar cards
+
+DOM.clearBtn.add('click', () => {
+    localStorage.clear();
+    DOM.cardsContainer.innerHTML = '';
+    window.location.reload();
 })
