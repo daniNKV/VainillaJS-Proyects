@@ -66,6 +66,7 @@ h4 {
     font-size: 1.4rem;
     margin-top: 2rem;
     padding: 1rem 1.5rem;
+    letter-spacing: .5px;
 }
 
 .btn-small {
@@ -103,7 +104,7 @@ h4 {
     font-size: 1.5em;
 
     transform: translateX(50%) rotateY(-10deg);
-    transition: transform 0.4s ease, opacity 0.4 ease;
+    transition: transform 0.4s ease, opacity 0.4s ease;
 
 
 }

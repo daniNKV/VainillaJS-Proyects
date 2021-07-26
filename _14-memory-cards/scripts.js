@@ -163,4 +163,4 @@ DOM.clearBtn.add('click', () => {
     localStorage.clear();
     DOM.cardsContainer.innerHTML = '';
     window.location.reload();
-})
+});
