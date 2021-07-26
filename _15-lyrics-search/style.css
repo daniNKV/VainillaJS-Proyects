@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@200;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap');
 
 :root {
     --clr-ppal: #000000;
@@ -23,7 +23,7 @@ html {
 body {
     font-size: 16px;
     background-color: #fff;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Poppins', sans-serif;
 
     margin: 0;
 }
@@ -72,4 +72,77 @@ header * {
 
 header h1 {
     margin: 0 0 3rem;
+    letter-spacing: 1px;
+}
+
+form {
+    position: relative;
+    width: 50rem;
+    max-width: 100%;
+}
+
+form input {
+    border: 0;
+    border-radius: 5rem;
+    font-size: 1.6rem;
+    padding: 1.5rem 3rem;
+    width: 100%;
+}
+
+form button {
+    background-color: #e056fd;
+    border: none;
+    border-radius: 5rem;
+    color: #fff;
+    font-size: 1.6rem;
+    padding: 1.3rem 3rem;
+    position: absolute;
+    top: .2rem;
+    right: .2rem;
+}
+
+.btn {
+    background-color: #8d56fd;
+    border: none;
+    border-radius: 1rem;
+    color: #fff;
+    padding: .4rem 1rem;
+}
+
+
+ul.songs {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul.songs li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.container {
+    margin: 3rem auto;
+    max-width: 100%;
+    width: 50rem;
+}
+
+
+.container h2 {
+    font-weight: 300;
+}
+
+.container p {
+    text-align: center;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+}
+
+.centered button {
+    transform: scale(1.3);
+    margin: 1.5rem;
 }
