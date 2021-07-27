@@ -96,3 +96,31 @@ p {
     top: -1rem;
     left: -1rem;
 }
+
+
+.pointer {
+    background-color: #fff;
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    display: block;
+}
+
+.pointer-container {
+    position: absolute;
+    top: -4rem;
+    left: 14rem;
+    width: 2rem;
+    height: 19rem;
+    animation: rotate 7.5s linear forwards infinite;
+    transform-origin: bottom center;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}
