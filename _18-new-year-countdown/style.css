@@ -61,7 +61,7 @@ body * {
 
 
 .countdown {
-    display: flex;
+    display: none;
     transform: scale(2);
 }
 
@@ -71,6 +71,16 @@ body * {
     align-items: center;
     justify-content: center;
     margin: 1.5rem;
+}
+
+.year {
+    font-size: 20rem;
+    z-index: -1;
+    opacity: 0.5;
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .time h2 {
